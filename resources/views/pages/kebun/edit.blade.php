@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Ubah Tanaman')
+@section('title', 'Ubah Kebun')
 
 @push('style')
     <!-- CSS Libraries -->
@@ -32,25 +32,25 @@
                     <a href="{{ route('kebun.index') }}"
                         class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
                 </div>
-                <h1>Edit Tanaman</h1>
+                <h1>Edit Kebun</h1>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                    <div class="breadcrumb-item"><a href="#">Tanaman</a></div>
-                    <div class="breadcrumb-item">Ubah Tanaman</div>
+                    <div class="breadcrumb-item"><a href="#">Kebun</a></div>
+                    <div class="breadcrumb-item">Ubah Kebun</div>
                 </div>
             </div>
 
             <div class="section-body">
-                <h2 class="section-title">Ubah Tanaman</h2>
+                <h2 class="section-title">Ubah Kebun</h2>
                 <p class="section-lead">
-                    Ubah Tanaman dan lengkapi semua data yang dibutuhkan.
+                    Ubah Kebun dan lengkapi semua data yang dibutuhkan.
                 </p>
 
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Tulis Tanaman Anda</h4>
+                                <h4>Tulis Kebun Anda</h4>
                             </div>
 
                             <?php
@@ -102,15 +102,32 @@
                                                     class="form-control" value="{{ $value->Kontak }}" /required>
                                             </div>
                                         </div>
+
                                         <div class="form-group row mb-4">
-                                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">langitude</label>
+                                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Wilayah</label>
+                                            <div class="col-sm-12 col-md-7">
+                                                <select name="wilayah" class="form-control">
+                                                    @if (isset($value->wilayah) && is_string($value->wilayah))
+                                                        <option value="Kota Bogor" {{ $value->wilayah === 'Kota Bogor' ? 'selected' : '' }}>Kota Bogor</option>
+                                                        <option value="Kab. Bogor" {{ $value->wilayah === 'Kab. Bogor' ? 'selected' : '' }}>Kab. Bogor</option>
+                                                    @else
+                                                        <option value="Kota Bogor" >Kota Bogor</option>
+                                                        <option value="Kab. Bogor" >Kab. Bogor</option>
+                                                    @endif
+
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row mb-4">
+                                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Langitude</label>
                                             <div class="col-sm-12 col-md-7">
                                                 <input type="text" name="lan"
                                                     class="form-control" value="{{ $value->lan }}" /required>
                                             </div>
                                         </div>
                                         <div class="form-group row mb-4">
-                                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">longitude</label>
+                                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Longitude</label>
                                             <div class="col-sm-12 col-md-7">
                                                 <input type="text" name="long"
                                                     class="form-control" value="{{ $value->long }}" /required>
@@ -124,21 +141,21 @@
                                                         class="form-control" />
                                                 </div>
                                                 {{-- <img class="base64-image" id="image-base64" src="{{ !empty($value->gambar) ? $value->gambar : asset('img/ofh/emptyImage.png') }}"> --}}
-                                                <?php             
+                                                <?php
                                                 $imageSrc = $value->gambar;
                                                 ?>
                                                 @if (isset($imageSrc) && is_string($imageSrc) && strpos($imageSrc, 'data:image') === 0)
-                                                    <img class="base64-image" id="image-base64" src="{{ $imageSrc }}">  
+                                                    <img class="base64-image" id="image-base64" src="{{ $imageSrc }}">
                                                 @else
                                                     <img class="base64-image" id="image-base64" src="{{ asset('img/ofh/emptyImage.png') }}">
                                                 @endif
-                        
+
 
                                                 <input type="hidden" name="gambar_Wisata" id="gambar_input" value="{{ $value->gambar }}" >
                                             </div>
                                         </div>
 
-                                        
+
 
 
 

@@ -39,7 +39,7 @@
                         {{-- @include('layouts.alert') --}}
                     </div>
                 </div>
-                <h2 class="section-title">kebun</h2>
+                <h2 class="section-title">Kebun</h2>
                 <p class="section-lead">
                     Anda bisa melihat, mengedit, menghapus, dan lainnya.
                 </p>
@@ -61,8 +61,8 @@
                                                 <th>Kebun</th>
                                                 <th>Dekskripsi</th>
                                                 <th>Kontak</th>
-                                                <th>langitude</th>
-                                                <th>longitude</th>
+                                                <th>Langitude</th>
+                                                <th>Longitude</th>
                                                 <th>Aksi</th>
                                             </tr>
                                         </thead>

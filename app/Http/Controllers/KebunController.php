@@ -85,6 +85,7 @@ class KebunController extends Controller
             'judul' => $request->input("judul"),
             'detail_wisata' => $request->input("detail_wisata"),
             'Kontak' => $request->input("Kontak"),
+            'wilayah' => $request->input("wilayah"),
             'lan' => $request->input("lan"),
             'long' => $request->input("long"),
             'gambar' => $request->input("gambar_Wisata")
@@ -153,6 +154,7 @@ class KebunController extends Controller
             'judul' => $request->input("judul"),
             'detail_wisata' => $request->input("detail_wisata"),
             'Kontak' => $request->input("Kontak"),
+            'wilayah' => $request->input("wilayah"),
             'lan' => $request->input("lan"),
             'long' => $request->input("long"),
             'gambar' => $request->input("gambar_Wisata")

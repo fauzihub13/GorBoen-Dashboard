@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Ubah Tanaman')
+@section('title', 'Ubah Kebun')
 
 @push('style')
     <!-- CSS Libraries -->
@@ -32,25 +32,25 @@
                     <a href="{{ route('kebun.index') }}"
                         class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
                 </div>
-                <h1>Buat Tanaman Baru</h1>
+                <h1>Buat Kebun Baru</h1>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                    <div class="breadcrumb-item"><a href="#">Tanaman</a></div>
-                    <div class="breadcrumb-item">Buat Tanaman</div>
+                    <div class="breadcrumb-item"><a href="#">Kebun</a></div>
+                    <div class="breadcrumb-item">Buat Kebun</div>
                 </div>
             </div>
 
             <div class="section-body">
-                <h2 class="section-title">Buat Tanaman</h2>
+                <h2 class="section-title">Buat Kebun</h2>
                 <p class="section-lead">
-                    Buat data tanaman dan lengkapi semua data yang dibutuhkan.
+                    Buat data Kebun dan lengkapi semua data yang dibutuhkan.
                 </p>
 
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Tulis Tanaman Anda</h4>
+                                <h4>Tulis Kebun Anda</h4>
                             </div>
 
                             <?php
@@ -73,7 +73,7 @@
                                         @csrf
                                         @method('POST')
 
-                                
+
 
                                         <div class="form-group row mb-4">
                                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Kebun</label>
@@ -93,26 +93,37 @@
                                         </div>
 
                                         <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kontak</label>
-                                        <div class="col-sm-12 col-md-7">
-                                            <input type="text" name="Kontak"
-                                            class="form-control" required>
+                                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kontak</label>
+                                            <div class="col-sm-12 col-md-7">
+                                                <input type="text" name="Kontak"
+                                                class="form-control" required>
+                                            </div>
                                         </div>
-                                    </div>
+
                                         <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">langitude</label>
-                                        <div class="col-sm-12 col-md-7">
-                                            <input type="text" name="lan"
-                                            class="form-control " required>
+                                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Wilayah</label>
+                                            <div class="col-sm-12 col-md-7">
+                                                <select name="wilayah" class="form-control">
+                                                    <option value="Kota Bogor" >Kota Bogor</option>
+                                                    <option value="Kab. Bogor" >Kab. Bogor</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                    </div>
+
                                         <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">longitude</label>
-                                        <div class="col-sm-12 col-md-7">
-                                            <input type="text" name="long"
-                                            class="form-control " required>
+                                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Langitude</label>
+                                            <div class="col-sm-12 col-md-7">
+                                                <input type="text" name="lan"
+                                                class="form-control " required>
+                                            </div>
                                         </div>
-                                    </div>
+                                        <div class="form-group row mb-4">
+                                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Longitude</label>
+                                            <div class="col-sm-12 col-md-7">
+                                                <input type="text" name="long"
+                                                class="form-control " required>
+                                            </div>
+                                        </div>
 
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Gambar</label>
@@ -126,16 +137,16 @@
                                         </div>
                                     </div>
 
-                                        
 
-                                        
+
+
 
 
 
                                         <div class="form-group row mb-4">
                                             <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                                             <div class="col-sm-12 col-md-7">
-                                                <button class="btn btn-primary" type="submit">Simpan Tanaman</button>
+                                                <button class="btn btn-primary" type="submit">Simpan Kebun</button>
                                             </div>
                                         </div>
                                     </form>
